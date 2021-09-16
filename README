@@ -1,0 +1,30 @@
+
+This directory contains a custom block for GnuRadio we called AIS Frame Builder.
+It is part of the AIS BlackToolkit.
+ 
+This block serves as generator of AIS frames and implements the full AIS stack.
+It is composed of three main components covering respectively the 
+application/presentation layers, the link layer and the physical layer, 
+as defined in the protocol specification for AIS.
+
+The AIS transmitter in form of GRC graph            a1e4b54db83fb895a3c94493126bb318  AiS_TX.grc
+The AIS transmitter in form of script kiddie script 52540b46f316ee460f4684a262132d36  AiS_TX.py
+An AIVDM encoder supporting the main message types  056ac09822b342da296617ba7b4055dd  AIVDM_Encoder.py
+Preprocessor / user interface (by Gary C. Kessler)  092d01c6a4f2e75513176b22f33a1f05  AIVDM_pre.pl
+The AIS Frame Builder block for GnuRadio            c8b7018386f64dd725fde119f406f574  gr-aistx.tgz
+A NMEA encoder (binary to ASCII) (C version)        2534dc06c21fe53f45bd2abab96bb6a7  unpacker.c
+A NMEA encoder (Perl version by Gary C. Kessler)    52ab60db06525f2230bb4de3ee61a34b  unpacker.pl
+
+$ mkdir build
+$ cd build
+$ cmake ../
+$ make
+$ sudo make install 
+
+Copyright 2013-2014 -- Embyte & Pastus
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
